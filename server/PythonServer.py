@@ -42,7 +42,7 @@ class ExampleHandler:
 handler = ExampleHandler()
 
 processor = Example.Processor(handler)
-transport = TSocket.TServerSocket(port)
+transport = TSocket.TServerSocket("0.0.0.0", port)
 tfactory = TTransport.TBufferedTransportFactory()
 pfactory = TBinaryProtocol.TBinaryProtocolFactory()
 
